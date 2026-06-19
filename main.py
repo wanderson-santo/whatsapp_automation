@@ -2,7 +2,7 @@ import logging
 from services.supabase_service import fetch_unprocessed_contacts
 from services.zapi_service import send_whatsapp_message
 
-# Configurando os logs (Boas Práticas)
+#
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def main():

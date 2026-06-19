@@ -1,8 +1,7 @@
-import pytest
+import pytest # type: ignore
 from unittest.mock import patch
 from services.zapi_service import send_whatsapp_message
 
-# O decorator @patch para substituir a função 'requests.post' real por um mock
 @patch('services.zapi_service.requests.post')
 def test_send_whatsapp_message_success(mock_post, monkeypatch):
 

@@ -18,7 +18,7 @@ def send_whatsapp_message(phone: str, name: str) -> bool: # pyright: ignore[repo
     # URL padrão de envio de texto da Z-API
     url = f"https://api.z-api.io/instances/{instance}/token/{token}/send-text"
 
-    # Mensagem exata exigida no desafio
+
     message = f"Olá, {name} tudo bem com você?"
 
     headers = {
@@ -38,5 +38,4 @@ def send_whatsapp_message(phone: str, name: str) -> bool: # pyright: ignore[repo
     if response.status_code in [200, 201]:
         return True
     else:
-        # Lança uma exceção detalhada caso a API recuse o envio
         response.raise_for_status()

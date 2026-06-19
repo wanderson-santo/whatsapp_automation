@@ -19,7 +19,6 @@ def fetch_unprocessed_contacts() -> list:
     """Busca os contatos que ainda não receberam a mensagem."""
     supabase = get_supabase_client()
     
-    # Faz o SELECT na tabela 'contatos' filtrando apenas quem ainda não foi processado
     response = supabase.table("contatos").select("*").eq("processado", False).execute()
     
     return response.data
